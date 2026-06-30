@@ -1,0 +1,36 @@
+<!DOCTYPE TYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %} Flask-WTF form{% endblock %}
+    </title>
+
+</head>
+
+<body>
+    <h1>Flask-WTF Registration</h1>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+
+
+    {% for category , msg in messages %}
+    <p style="color: green;"> {{msg}}</p>
+    {{msg}}
+
+
+    {% endfor %}
+
+
+
+    {% endif %}
+
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
